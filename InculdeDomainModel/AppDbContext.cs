@@ -1,0 +1,23 @@
+﻿using InculdeDomainModel.Models;
+using Microsoft.EntityFrameworkCore;
+
+namespace InculdeDomainModel
+{
+    public class AppDbContext : DbContext
+    {
+        public DbSet<Blog> Blogs { get; set; }
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            base.OnConfiguring(optionsBuilder);
+            optionsBuilder.UseSqlServer("Server =DESKTOP-R7LIJV7\\SQLEXPRESS ; Database =EF_Blogss ; Integrated Security =SSPI ; TrustServerCertificate =True ");
+        }
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<AuditEntry>();
+            base.OnModelCreating(modelBuilder);
+            modelBuilder.Entity<Blog>().Property(u => u.URL).IsRequired();
+            ////new BlogEntityTypeConfiguration().Configure(modelBuilder.Entity<Blog>());
+            //modelBuilder.ApplyConfigurationsFromAssembly(typeof(BlogEntityTypeConfiguration).Assembly);
+        }
+    }
+}
