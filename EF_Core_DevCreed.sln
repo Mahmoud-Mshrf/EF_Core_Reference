@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 18
-VisualStudioVersion = 18.7.11811.120 insiders
+VisualStudioVersion = 18.7.11811.120
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EF_Core1_7", "EF_Core\EF_Core1_7.csproj", "{9F6E8D27-08EE-4FC4-A7C9-959C773CB703}"
 EndProject
@@ -50,6 +50,11 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExecuteSqlRaw", "ExcuteRawSql\ExecuteSqlRaw.csproj", "{0228C199-0C08-4272-8065-A277B0387A5F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReverseEngineering", "ReverseEngineering\ReverseEngineering.csproj", "{61E95AB2-7DCA-47A5-BB44-96D963863413}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "attachments", "attachments", "{7D3A0A6C-B268-4D3B-BDDF-B94D8B178BF3}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\Desktop\EF Core DevCreed\Screenshot 2026-05-13 225139.png = ..\..\Desktop\EF Core DevCreed\Screenshot 2026-05-13 225139.png
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

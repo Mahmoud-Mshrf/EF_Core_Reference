@@ -48,7 +48,10 @@ namespace RemoveData
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            base.OnModelCreating(modelBuilder);
+            modelBuilder.Entity<Author>().
+                HasMany(x => x.Books).
+                WithOne(x => x.Author).
+                OnDelete(DeleteBehavior.Restrict);
         }
     }
     public class Book
