@@ -16,8 +16,9 @@ namespace EF_Core8
         {
             base.OnModelCreating(modelBuilder);
             //modelBuilder.Entity<Blog>().Property(u=>u.URL).IsRequired();
-            //new BlogEntityTypeConfiguration().Configure(modelBuilder.Entity<Blog>());
-            modelBuilder.ApplyConfigurationsFromAssembly(typeof(BlogEntityTypeConfiguration).Assembly);
+            new BlogEntityTypeConfiguration().Configure(modelBuilder.Entity<Blog>());
+            // or
+            // modelBuilder.ApplyConfigurationsFromAssembly(typeof(BlogEntityTypeConfiguration).Assembly);
         }
     }
 }
